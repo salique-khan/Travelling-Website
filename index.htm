@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png" type="">
+    <script src="https://kit.fontawesome.com/e48d166edc.js" crossorigin="anonymous"></script>
+    <title>Our Website</title>
+</head>
+
+<body oncontextmenu="myfunc(); return false">
+    <header>
+        <div class="navbar-container">
+            <div>
+                <img src="logo.png" class="logo"style="width:170px; height:80px;">
+            </div>
+            <ul>
+                <li class="active">
+                    <a href="index.htm">Home
+                    </a>
+                    <div class="underline"></div>
+                </li>
+                <li>
+                    <a href="about.html">About Us</a>
+                    <div class="underline"></div>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                    <div class="underline"></div>
+                </li>
+                <li>
+                    <a href="search-flights.htm">Packages</a>
+                    <div class="underline"></div>
+                </li>
+            </ul>
+            <div class="button-form">
+                <a href="login_form.htm" id="submit">Book Now!!</a>
+            </div>
+    </header>
+    <main>
+        <section class="image">
+            <div class="text1">
+                <p>HUNDREDS OF AMAZING <br> DESTINATIONS</p>
+                <br><br>
+                <br>
+                <span>We offer a variety of destinations to travel to,<br> ranging from exotic to some extreme ones.
+                    They <br> include very popular countries and cities like Paris, <br> Rio de Janeiro, Cairo and a lot
+                    of others.</span><br>
+                <br>
+                <a href="search-flights.htm"><button class="learn-more-btn">LEARN MORE</button></a>
+                <br><br>
+            </div>
+            <div class="from">
+                <form action="search-flights.htm" onsubmit="">
+                    <div class="container">
+                        <br>
+                        <Legend>Find Your Tour</Legend>
+                        <br>
+                        <div class="from-input-box">
+                            <h6>From</h6>
+                            <select name="" id="from-list" required>
+                                <option value="india" class="opt">Mumbai</option>
+                                <option value="australia" class="opt">Agra</option>
+                                <option value="new zealand" class="opt">Uttrakhand</option>
+                                <option value="west indies" class="opt">West Bangal</option>
+                                <option value="austria" class="opt">Chennai</option>
+                            </select>
+                        </div>
+                        <br><br>
+                        <div class="to-input">
+                            <h6>To</h6>
+                            <select name="" id="to-list">
+                                <option value="india" class="opt">Sri Nagar</option>
+                                <option value="australia" class="opt">Agra</option>
+                                <option value="new zealand" class="opt">Uttrakhand</option>
+                                <option value="west indies" class="opt">West Bangal</option>
+                                <option value="austria" class="opt">Chennai</option>
+                            </select>
+                        </div>
+                        <br><br>
+                        <div class="duration-dept-date">
+                            <div class="date">
+                                <h5>Departure Date</h5>
+                                <input type="date" name="" id="date-input" required>
+                            </div>
+                            <div class="days">
+                                <h5>Duration</h5>
+                                <select name="" id="duration" value="Any-Length" required>
+                                    <option value="two-day">2 Days</option>
+                                    <option value="three-day">3 Days</option>
+                                    <option value="1-week">1 Week</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="adults-children">
+                            <div>
+                                <h6>Adults</h6>
+                                <input type="number" id="adults-input" required>
+                            </div>
+                            <div>
+                                <h6>Children</h6>
+                                <input type="number" id="children-input" required>
+                                <br><br>
+                            </div>
+                        </div>
+                        <div class="srch-btn">
+                            <Button onclick="choice(this.Any-Length)" type="submit" class="search-flights-btn"><a href="search-flights.htm">See Packages !!!</a></Button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container2">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>  
+                </div>
+            </div>
+        </div>
+   </footer>
+   <!-- <script src="packages.js"></script> -->
+    <script src="script.js"></script>
+    <script>
+        function myfunc(){
+            alert("Right Click is Disabled!!")
+        }
+    </script>
+</body>
+</html>
