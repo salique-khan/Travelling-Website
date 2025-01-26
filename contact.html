@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_contact.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" href="logo.png" type="">
+    <link rel="stylesheet" href="contact.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e48d166edc.js" crossorigin="anonymous"></script>
+
+    <title>Our Website</title>
+</head>
+
+<body oncontextmenu="myfunc();return false">
+    <header>
+        <div class="navbar-container">
+            <div>
+                <img src="logo.png" class="logo"style="width:170px; height:80px;">
+            </div>
+            <ul>
+                <li class="active">
+                    <a href="index.htm">Home
+                    </a>
+                    <div class="underline"></div>
+                </li>
+                <li>
+                    <a href="about.html">About Us</a>
+                    <div class="underline"></div>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                    <div class="underline"></div>
+                </li>
+                <li>
+                    <a href="search-flights.htm">Packages</a>
+                    <div class="underline"></div>
+                </li>
+            </ul>
+            <div class="button-form">
+                <a href="login_form.htm" id="submit">Book Now!!</a>
+            </div>
+    </header>
+
+
+    <section class="section1">
+
+        <div style="font-family: cursive ;">If You Have <span class="world">Any Query</span> Please Scroll Down To Contact Us ⬇</div>
+    </section>
+
+    <div class="container1">
+        <div class="locate">
+            <article class="address">
+                <h2>Contact Us</h2>
+
+                <strong>Address</strong>
+                <br> Sector - 16, New Panvel
+                <br> Navi Mumbai, Maharashtra 410206
+                <br>&nbsp;
+                <BR><strong>Phone: </strong> 1300 218 324
+                <br><strong>Fax: </strong>(07) 5491 3055
+                <br><strong>Email: </strong><a class="hyperlink"
+                    href="mailto:sales@sunshinetoyota.com.au">services@sunshinetravels.com.au</a>
+            </article>
+        </div>
+        <form onsubmit="sendEmail() ; reset() ;return false;">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" placeholder="Type your name" required>
+            <input type="email" id="email" placeholder="Type your mail" required>
+            <input type="text" id="phone" placeholder="[6-9]{1}[0-9]{9} " value="+91" onchange="valid()" required>
+            <textarea name="" id="message" rows="10" placeholder="How can we help you ?"></textarea>
+            <button type="submit">Send Query</button>
+        </form>
+
+        
+    </div>
+
+    <section>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d943.1105544502323!2d73.1042965674008!3d19.00022572009805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e83a36fbf179%3A0xbbb0905051e8c56e!2sAnjuman-I-Islam&#39;s%20Kalsekar%20Technical%20Campus!5e0!3m2!1sen!2sin!4v1669473312421!5m2!1sen!2sin"
+            style="border:0" allowfullscreen></iframe>
+    </section>
+    <footer class="footer">
+        <div class="container2">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+            <script src=" https://smtpjs.com/v3/smtp.js"></script>
+        <script src="script.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                    Host : "smtp.elasticemail.com",
+                    Username : "khanmaajid313@gmail.com",
+                    Password : "631EAF41CE3A6C45A4696F653410D6718342",
+                    To : 'paradisetoursandtravelagency@gmail.com',
+                    From : document.getElementById('email').value,
+                    Subject : "New Customer Travel Enquiry",
+                    Body : "Name : " + document.getElementById('name').value + "<br> Customer Email : " + document.getElementById('email').value + "<br> Contact Number : " + document.getElementById('phone').value + "<br> Query : " + document.getElementById('message').value
+ 
+                }).then(
+                message => alert(message)
+                );
+            }
+
+
+            function myfunc()
+            {
+                alert("Right Click is Disabled!!!");
+            }
+
+            function valid()
+            {
+                var ph = document.getElementById('phone').value;
+                reg  = /[6-9]{1}[0-9]{9}$/;
+                if(reg.test(ph))
+                {
+
+                }
+                else
+                {
+                    alert("Match The Pattern [6-9]{1}[0-9]{9}/Invalid Phone Number");
+                }
+            }
+        </script>
+</body>
+
+</html>

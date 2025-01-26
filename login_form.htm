@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="login_form.css">
+    <title>Document</title>
+</head>
+
+<body oncontextmenu="myfunc(); return false">
+    <div class="login-box">
+        <h2>Booking</h2>
+        <form action="booked.htm" method="post" onsubmit="" >
+            <div class="user-box">
+                <input type="text" required name="nam" id="name" autocomplete="off" onchange="name_validate()" >
+                <label>Full Name</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="idd" id="package-id"  autocomplete="off" onchange="pck(this.value)" required >
+                <label>Pacakage ID</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name=""  autocomplete="off" id="durationn">
+                <label>Pacakage Duration</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name=""  autocomplete="off" id="amountt">
+                <label>Amount</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="ph" value="+91" id="phone-no"  autocomplete="off" onchange="phone_no()">
+                <label>Phone No</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="pin" id="pinn" required  autocomplete="off" onchange="card_validate()">
+                <label>Card Number</label>
+            </div>
+            <div class="button-form">
+               <button type="submit" id="submitt"><a href="booked.htm"></a> Book Now</button>
+            </div>
+        </form>
+
+    </div>
+    <script>
+        function name_validate() {
+            var namee = document.getElementById('name').value;
+            var submit1 = document.getElementById('submit');
+            reg = /^[A-Z]{1}/;
+            if (reg.test(namee)) {
+            
+            }
+            else {
+                alert("Name First Letter Should Start With Caps")
+                submit1.addEventListener("click", function (event) {
+                    event.preventDefault()
+                });
+            }
+        }
+        function pck(n) {
+            var duration = document.getElementById('durationn');
+            var amount = document.getElementById('amountt');
+            if (n == 101) { 
+                amount.value = '1 lac'
+                duration.value = '2 Days'
+            }
+            else if (n == 102) {
+                amount.value = '10k'
+                duration.value = '2 Days'
+                
+            }
+            else if (n == 103) {
+                amount.value = '20k'
+                duration.value = '2 Days'
+            }
+            else if(n == 104)
+            {
+                amount.value = '2 lac'
+                duration.value = '3 Days'
+            }
+            else if(n == 105)
+            {
+                amount.value = '10k'
+                duration.value = '3 Days'
+            }
+            else if(n == 106)
+            {
+                amount.value = '20k'
+                duration.value = '3 Days'
+            }
+            else if(n == 107)
+            {
+                amount.value = '4 lac'
+                duration.value = '1 Week'
+            }
+            else if(n == 108)
+            {
+                amount.value = '70k'
+                duration.value = '1 Week'
+            }
+            else if(n == 109)
+            {
+                amount.value = '50k'
+                duration.value = '1 Week'
+            }
+            else {
+                alert("Enter Available Package ID");
+            }
+
+        }
+
+        function phone_no() {
+            d = document.getElementById('phone-no').value;
+            var submit1 = document.getElementById('submit');
+            reg = /[6-9]{1}[0-9]{9}$/;
+            {
+
+                if (reg.test(d)) {
+                    // alert("Valid Number")
+                }
+
+                else {
+                    alert("Invalid Number")
+                    submit1.addEventListener("click", function (event) {
+                    event.preventDefault()
+                });
+                }
+            }
+        }
+        function card_validate()
+        {
+            var c = document.getElementById('pinn').value;
+            reg=/[0-9]{4}(\ )[0-9]{4}(\ )[0-9]{4}(\ )[0-9]{4}$/;
+            if(reg.test(c))
+            {
+                alert("True")
+            }
+            else{
+                alert("Plzz Match The Pattern")
+            }
+        }
+
+
+
+        function myfunc()
+            {
+                alert("Right Click is Disabled!!!");
+            }
+       
+    </script>
+</body>
+
+</html>
